@@ -32,6 +32,7 @@ namespace CampusNetworkManager.src.core
                         if (unstableTime > 3)
                         {
                             Toast.sayCheck();
+                            Thread.Sleep(10000);
                         }
                     }
                     finally
