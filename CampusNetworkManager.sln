@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusNetworkManager", "CampusNetworkManager\CampusNetworkManager.csproj", "{A7839EB2-342C-4C5D-9AF1-61EFD64F390B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CampusNetworkManagerSetup", "CampusNetworkManagerSetup\CampusNetworkManagerSetup.vdproj", "{C710CEED-BA15-4DC5-827B-E1DB74F66FD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7839EB2-342C-4C5D-9AF1-61EFD64F390B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7839EB2-342C-4C5D-9AF1-61EFD64F390B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7839EB2-342C-4C5D-9AF1-61EFD64F390B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7839EB2-342C-4C5D-9AF1-61EFD64F390B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C710CEED-BA15-4DC5-827B-E1DB74F66FD0}.Debug|Any CPU.ActiveCfg = Debug
+		{C710CEED-BA15-4DC5-827B-E1DB74F66FD0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {539E404D-0691-4808-98C7-FA8F2743A7C8}
+	EndGlobalSection
+EndGlobal
