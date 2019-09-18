@@ -5,6 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CampusNetworkManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Visibility="Hidden"/>
+        Title="设置" Height="170" Width="500"
+        Closing="Window_Closing"
+        >
+    <StackPanel Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="WiFi SSID 如有多个请用&amp;号分割" FontSize="18" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="TextBox_SSID" Grid.Column="1" Margin="10,2"/>
+        </Grid>
+        <Button x:Name="Button_Save" Content="保存" Click="Button_Save_Click" HorizontalAlignment="Center" Margin="20,20,20,20" Padding="5" UseLayoutRounding="False"/>
+        
+        <TextBlock x:Name="TextBlock_SaveSuccess" Text="保存成功" HorizontalAlignment="Center" Padding="0,10,0,0" Visibility="Hidden"/>
+    </StackPanel>
 </Window>

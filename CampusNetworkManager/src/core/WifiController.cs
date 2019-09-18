@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -20,16 +21,32 @@ namespace CampusNetworkManager.src.core
 
         private void connect()
         {
+            string[] ssids = ConfigurationManager.AppSettings["SSID"].Split('&');
+            if (ssids.Length == 0)
+            {
+                ssids ="BNUZ&BNUZ-Student".Split('&');
+            }
+
             AccessPoint accessPoint = wifi.GetAccessPoints().Find(
                 delegate(AccessPoint ap)
                 {
                     AuthRequest authRequest = new AuthRequest(ap);  // 防止那个开热点叫BNUZ的缺德仔
-                   
-                    return ap.Name == "BNUZ-Student" && !authRequest.IsPasswordRequired;
+
+                    foreach (string ssid in ssids)
+                    {
+                        if (ap.Name == ssid && !authRequest.IsPasswordRequired)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
                 });
 
-            AuthRequest auth = new AuthRequest(accessPoint);
-            accessPoint.Connect(auth);
+            if (accessPoint != null)
+            {
+                AuthRequest auth = new AuthRequest(accessPoint);
+                accessPoint.Connect(auth);
+            }
         }
 
         public void reconnect()
