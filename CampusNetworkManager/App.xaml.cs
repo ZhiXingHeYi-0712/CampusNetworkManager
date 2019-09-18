@@ -32,7 +32,8 @@ namespace CampusNetworkManager
             }
             trayIcon = new NotifyIcon
             {
-                Icon = new System.Drawing.Icon(AppDomain.CurrentDomain.BaseDirectory+"\\resource\\resource.ico"),
+
+                Icon = new System.Drawing.Icon(AppDomain.CurrentDomain.BaseDirectory+"\\resource.ico"),
                 Text = "校园网断线重连"
             };
             trayIcon.Visible = true;
