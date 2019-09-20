@@ -12,6 +12,7 @@ namespace CampusNetworkManager.src.core
 {
     class WifiController
     {
+        
         Wifi wifi = new Wifi();
 
         private void disConnect()
@@ -21,10 +22,11 @@ namespace CampusNetworkManager.src.core
 
         private void connect()
         {
-            string[] ssids = ConfigurationManager.AppSettings["SSID"].Split('&');
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            string[] ssids = configuration.AppSettings.Settings["SSID"].Value.Split('&');
             if (ssids.Length == 0)
             {
-                ssids ="BNUZ&BNUZ-Student".Split('&');
+                ssids ="None&Null".Split('&');
             }
 
             AccessPoint accessPoint = wifi.GetAccessPoints().Find(

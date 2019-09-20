@@ -16,10 +16,11 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="WiFi SSID 如有多个请用&amp;号分割" FontSize="18" HorizontalAlignment="Center" TextWrapping="Wrap"/>
-            <TextBox x:Name="TextBox_SSID" Grid.Column="1" Margin="10,2"/>
+            <TextBox x:Name="TextBox_SSID" Grid.Column="1" Margin="10,2" Text="SSID" TextAlignment="Center"/>
         </Grid>
         <Button x:Name="Button_Save" Content="保存" Click="Button_Save_Click" HorizontalAlignment="Center" Margin="20,20,20,20" Padding="5" UseLayoutRounding="False"/>
-        
+        <Button x:Name="Debug_Button" Content="run" Click="Debug_Button_Click" HorizontalAlignment="Center" Margin="236,0,236.2,0" Visibility="Hidden"/>
+
         <TextBlock x:Name="TextBlock_SaveSuccess" Text="保存成功" HorizontalAlignment="Center" Padding="0,10,0,0" Visibility="Hidden"/>
     </StackPanel>
 </Window>

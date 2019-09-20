@@ -22,5 +22,17 @@ namespace CampusNetworkManager.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BNUZ-Student&BNUZ")]
+        public string SSID {
+            get {
+                return ((string)(this["SSID"]));
+            }
+            set {
+                this["SSID"] = value;
+            }
+        }
     }
 }
